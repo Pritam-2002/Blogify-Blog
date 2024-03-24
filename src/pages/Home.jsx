@@ -5,20 +5,26 @@ import Landing from './Landing/landing';
 import Partners from './Landing/partners';
 import Trendingcard from './Landing/trendingcard';
 import Statistic from './Landing/statistic';
+import { useSelector } from 'react-redux';
 
 function Home() {
     const [posts, setPosts] = useState([])
-
+    const authStatus = useSelector(state => state.auth.status)
+    
     useEffect(() => {
         appwriteService.getPosts()
         .then((posts) => {
             if (posts) {
                 setPosts(posts.documents)
+                 
             }
         })
     }, [])
+    
   
-    if (posts.length === 0) {
+  
+
+    if ((!authStatus) ) {
         return (
             <div className="w-full py-8 mt-4 text-center">
                 <Container>
