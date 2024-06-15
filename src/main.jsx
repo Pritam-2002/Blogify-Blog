@@ -16,6 +16,8 @@ import EditPost from "./pages/EditPost";
 import Post from "./pages/Post";
 
 import AllPosts from "./pages/AllPosts";
+import Aboutus from './pages/Aboutus.jsx'
+import Contactus from './pages/Contactus.jsx'
 
 const router = createBrowserRouter([
   {
@@ -73,6 +75,15 @@ const router = createBrowserRouter([
             path: "/post/:slug",
             element: <Post />,
         },
+
+        {
+            path:"/aboutus",
+            element:<Aboutus/>
+        },
+        {
+            path:"/contactus",
+            element:<Contactus/>
+        }
     ],
 },
 ])

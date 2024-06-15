@@ -52,7 +52,7 @@ function Header() {
     <header className='py-3  shadow-md'>
       <Container>
         <nav className='flex justify-center h-10  items-center'>
-          <div className='mr-4'>
+          <div className='mr-4 ml-4'>
             <Link to='/'>
               <Logo width='70px'   />
 
